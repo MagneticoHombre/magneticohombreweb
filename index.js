@@ -33,6 +33,10 @@ app.get("/agradecimiento", (req, res) => {
   res.sendFile(join(__dirname, "agradecimiento.html"));
 });
 
+app.get("/email", (req, res) => {
+  res.send('funciona');
+});
+
 app.post("/email", (req, res) => {
   const { email, firstName } = req.body;
   if (!email || !firstName)
